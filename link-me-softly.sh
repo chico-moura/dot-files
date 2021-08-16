@@ -28,6 +28,8 @@ run()
 			esac ;;
 			*) echo "max number of arguments: 1" ;;
 		esac
+	else
+		echo "Check the existance and names of the files in $path_dot_files and try again"
 	fi
 }
 
@@ -43,7 +45,6 @@ check_files_existence()
 		fi
 	done
 
-	echo "Check the existance and names of the files in $path_dot_files and try again"
 }
 
 link_all()
