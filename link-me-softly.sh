@@ -41,13 +41,17 @@ link()
 
 		if [ -L $file ] ; then
 			echo "as a symlink"
+
 		elif [ -d $file ] ; then
-			echo "as a directory, and this is unexpected. It will be ignored;"
+			echo "as a directory, and this was unexpected. It will be ignored"
+
 		else
 			echo "as a file"
+
 		fi
 	else
-		echo "$file not found"
+		echo "$file not found. A new symlink will be created"
+
 	fi
 }
 
