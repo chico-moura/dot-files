@@ -3,7 +3,7 @@
 
 # Start tmux by default
 if [ "$TMUX" = "" ]; then 
-	tmux attach -t main || tmux new -s main
+	tmux new
 fi
 
 # Path to your oh-my-zsh installation.
