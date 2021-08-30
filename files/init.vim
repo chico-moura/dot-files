@@ -29,7 +29,10 @@ color dracula
 """"""""""""""
 " NERDTree
 """"""""""""""
+" Open/Close
 nnoremap <F3> :NERDTreeToggle<CR>
+
+" Navigate through tabs
 nnoremap <C-Left> :tabp<CR>
 nnoremap <C-h> :tabp<CR>
 nnoremap <C-Right> :tabn<CR>
