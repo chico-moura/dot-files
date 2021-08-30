@@ -4,6 +4,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'dracula/vim'
+Plug 'preservim/nerdtree'
 
 call plug#end()
 
@@ -25,6 +26,14 @@ set updatetime=300
 syntax on
 color dracula
 
+""""""""""""""
+" NERDTree
+""""""""""""""
+nnoremap <F3> :NERDTreeToggle<CR>
+nnoremap <F2> :NERDTreeFocus<CR>
+
+" Exit Vim if NERDTree is the only window remaining in the only tab.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
 """"""""""""""
 " CoC Config
