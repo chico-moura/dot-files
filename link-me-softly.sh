@@ -52,6 +52,7 @@ link_all()
 	link zshrc $path_zshrc/.zshrc
 	link tmux.conf $path_tmux_conf/.tmux.conf
 	link init.vim $path_nvim/init.vim
+	vim +'PlugInstall --sync' +qa
 }
 
 link()
