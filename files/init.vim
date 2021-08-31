@@ -7,6 +7,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'dracula/vim'
 Plug 'preservim/nerdtree'
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
