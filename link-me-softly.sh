@@ -7,7 +7,8 @@ path_nvim=$HOME/.config/nvim
 path_coc_settings=$HOME/.config/nvim
 
 # dot-files path
-path_dot_files=$(dirname $(readlink -f $0))/files
+path_script=$(dirname $(readlink -f $0))
+path_dot_files=$path_script/files
 
 # flags
 auto_confirm=false
@@ -55,6 +56,7 @@ link_all()
 	link init.vim $path_nvim/init.vim
 	link coc-settings.json $path_coc_settings/coc-settings.json
 	plug_install
+	install_pip_requirements
 }
 
 link()
@@ -152,6 +154,15 @@ plug_install()
 	if [ $answer = y ]
 	then
 		vim +'PlugInstall --sync' +qa
+	fi
+}
+
+install_pip_requirements()
+{
+	ask_for_confirmation 'Install Pip requirements? (y/n) '
+	if [ $answer = y ]
+	then
+		pip install -r $path_script/requirements.txt 
 	fi
 }
 
