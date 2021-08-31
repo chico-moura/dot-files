@@ -1,6 +1,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc-json'
 Plug 'fannheyward/coc-pyright'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
