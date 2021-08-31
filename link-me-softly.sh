@@ -4,6 +4,7 @@
 path_zshrc=$HOME
 path_tmux_conf=$HOME
 path_nvim=$HOME/.config/nvim
+path_coc_settings=$HOME/.config/nvim
 
 # dot-files path
 path_dot_files=$(dirname $(readlink -f $0))/files
@@ -52,7 +53,8 @@ link_all()
 	link zshrc $path_zshrc/.zshrc
 	link tmux.conf $path_tmux_conf/.tmux.conf
 	link init.vim $path_nvim/init.vim
-	vim +'PlugInstall --sync' +qa
+	link coc-settings.json $path_coc_settings/coc-settings.json
+	plug_install
 }
 
 link()
@@ -144,7 +146,14 @@ create_link()
 	echo "$file symlink created: $symlink -> $path_dot_files/$file"
 }
 
-
+plug_install()
+{
+	ask_for_confirmation 'Run PlugInstall? (y/n) '
+	if [ $answer = y ]
+	then
+		vim +'PlugInstall --sync' +qa
+	fi
+}
 
 echo_help()
 {
