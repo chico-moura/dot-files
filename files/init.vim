@@ -9,6 +9,20 @@ Plug 'dracula/vim'
 Plug 'preservim/nerdtree'
 Plug 'jiangmiao/auto-pairs'
 
+" HTML support
+Plug 'mattn/emmet-vim'
+
+" Typescipt support
+Plug 'HerringtonDarkholme/yats.vim' 
+
+" React support
+Plug 'MaxMEllon/vim-jsx-pretty'
+
+" Typescipt plugins
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'prettier/vim-prettier'
+
+
 call plug#end()
 
 
@@ -22,6 +36,15 @@ set numberwidth=3
 " Avoid delays
 set updatetime=300
 
+" Indent 
+set tabstop=4       " number of visual spaces per TAB
+set softtabstop=4   " number of spaces in tab when editing
+set shiftwidth=4    " number of spaces to use for autoindent
+set expandtab       " tabs are space
+set autoindent
+set copyindent      " copy indent from the previous line
+" }}} Spaces & Tabs
+"
 """"""""""""""""
 " Color Scheme
 """"""""""""""""
@@ -52,6 +75,18 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 " * Could not observe any effect of Format functions
 " * Does [g really means double [?
 " * Is 'textDocument/selectionRange' some coc-settings.json witchcraft?
+
+" CoC estensions
+let g:coc_global_extensions = [
+  \ 'coc-snippets',
+  \ 'coc-actions',
+  \ 'coc-lists',
+  \ 'coc-tsserver',
+  \ 'coc-html',
+  \ 'coc-css',
+  \ 'coc-prettier',
+  \ 'coc-vimlsp',
+  \ ]
 
 
 " TextEdit might fail if hidden is not set.
@@ -190,6 +225,16 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
 " provide custom statusline: lightline.vim, vim-airline.
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+
+" Refactor
+nmap <leader>rn <Plug>(coc-rename)
+
+" Code navigtion
+nmap <silent> gf <Plug>(coc-definition) 
+
+" Actions
+xmap <silent> <leader>a  <Plug>(coc-codeaction-selected)
+nmap <silent> <leader>a  <Plug>(coc-codeaction-selected)
 
 " Mappings for CoCList
 " Show all diagnostics.
