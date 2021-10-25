@@ -164,6 +164,11 @@ nmap <leader>rn <Plug>(coc-rename)
 "xmap <leader>f  <Plug>(coc-format-selected)
 "nmap <leader>f  <Plug>(coc-format-selected)
 
+augroup typescript
+    autocmd! BufRead,BufNewFile *.ts,*tsx setlocal filetype=typescript
+    autocmd FileType typescript setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+augroup end
+
 augroup mygroup
   autocmd!
   " Setup formatexpr specified filetype(s).
