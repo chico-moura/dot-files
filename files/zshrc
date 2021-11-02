@@ -110,3 +110,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Created by `pipx` on 2021-07-30 15:29:37
 export PATH="$PATH:/home/chico/.local/bin"
+alias python="python3"
+
+export PATH="$HOME/.poetry/bin:$PATH"

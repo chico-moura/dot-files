@@ -6,6 +6,7 @@ Plug 'fannheyward/coc-pyright'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'dracula/vim'
+Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree'
 Plug 'jiangmiao/auto-pairs'
 
@@ -48,9 +49,9 @@ set copyindent      " copy indent from the previous line
 """"""""""""""""
 " Color Scheme
 """"""""""""""""
-"" Turn-on dracula color scheme
 syntax on
-color dracula
+let g:gruvbox_italic = '1'
+colorscheme gruvbox
 
 """"""""""""""
 " NERDTree
