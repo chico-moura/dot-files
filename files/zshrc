@@ -78,6 +78,7 @@ ZSH_THEME="agnoster"
 plugins=(
 	git
 	zsh-syntax-highlighting
+	asdf
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -108,8 +109,15 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# alias python="python3"
+
+function mkdpy() {
+    mkdir "$1"
+    touch "$1"/__init__.py
+}
+alias mkdpy=mkdpy()
+
 # Created by `pipx` on 2021-07-30 15:29:37
 export PATH="$PATH:/home/chico/.local/bin"
-alias python="python3"
 
 export PATH="$HOME/.poetry/bin:$PATH"

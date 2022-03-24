@@ -44,8 +44,7 @@ set shiftwidth=4    " number of spaces to use for autoindent
 set expandtab       " tabs are space
 set autoindent
 set copyindent      " copy indent from the previous line
-" }}} Spaces & Tabs
-"
+
 """"""""""""""""
 " Color Scheme
 """"""""""""""""
@@ -141,6 +140,10 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 "nmap <silent> gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window.
+
+
+
+
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
@@ -245,6 +248,7 @@ nmap <silent> <leader>a  <Plug>(coc-codeaction-selected)
 " Mappings for CoCList
 " Show all diagnostics.
 nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
+
 " Manage extensions.
 nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
 " Show commands.
