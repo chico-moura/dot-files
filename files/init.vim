@@ -23,6 +23,13 @@ Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'prettier/vim-prettier'
 
+" React HTML snippets
+Plug 'SirVer/ultisnips'
+Plug 'mlaursen/vim-react-snippets'
+
+" .tsx highlighting
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 
 call plug#end()
 

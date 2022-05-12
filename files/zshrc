@@ -110,6 +110,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # alias python="python3"
+#
+alias godot="~/Godot_v3.4.4-stable_x11.64"
 
 function mkdpy() {
     mkdir "$1"
@@ -121,3 +123,7 @@ alias mkdpy=mkdpy()
 export PATH="$PATH:/home/chico/.local/bin"
 
 export PATH="$HOME/.poetry/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
