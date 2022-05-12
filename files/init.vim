@@ -9,6 +9,7 @@ Plug 'dracula/vim'
 Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree'
 Plug 'jiangmiao/auto-pairs'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " HTML support
 Plug 'mattn/emmet-vim'
