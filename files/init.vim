@@ -1,16 +1,19 @@
-let s:DOT_FILES_DIR = fnamemodify(resolve(expand('<sfile>:p')), ':h')
+let g:DOT_FILES_DIR = fnamemodify(resolve(expand('<sfile>:p')), ':h')
 
-function SourceFromVimDir(filename)
-    execute 'source' s:DOT_FILES_DIR . '/vim/' . a:filename . '.vim'
+
+function g:SourceFromDotFilesDir(directory, filename)
+    execute 'source' g:DOT_FILES_DIR . '/' . a:directory . a:filename 
 endfunction
 
 
-function SourceMany(...)
+function g:SourceMany(directory, ...)
     for filename in a:000
-        call SourceFromVimDir(filename)
+        call SourceFromDotFilesDir(a:directory, filename)
     endfor
 endfunction
 
 call SourceMany(
-            \'plugins',
-	    \)
+        \'vim/',
+        \'plugins.vim',
+	\'defaults.vim'
+\)

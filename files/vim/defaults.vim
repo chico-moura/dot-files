@@ -1,35 +1,16 @@
-call plug#begin('~/.local/share/nvim/plugged')
+" These settings will be applied to all filetypes
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'neoclide/coc-json'
-Plug 'fannheyward/coc-pyright'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'dracula/vim'
-Plug 'morhetz/gruvbox'
-Plug 'preservim/nerdtree'
-Plug 'jiangmiao/auto-pairs'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+" DISPLAY LINE COONTER
+set number relativenumber       "hybrid numbers
+set numberwidth=3
 
-" HTML support
-Plug 'mattn/emmet-vim'
+"INDENTING
+set tabstop=4           "number of visual spaces per TAB
+set softtabstop=4       "number of spaces in tab when editing
+set shiftwidth=4        "number of spaces to use for autoindent
+set expandtab		"tabs are spaces
+set autoindent		"autoindent
+set copyindent		"copy indent from previous line
 
-" Typescipt support
-Plug 'HerringtonDarkholme/yats.vim' 
-
-" React support
-Plug 'MaxMEllon/vim-jsx-pretty'
-
-" Typescipt plugins
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-Plug 'prettier/vim-prettier'
-
-" React HTML snippets
-Plug 'SirVer/ultisnips'
-Plug 'mlaursen/vim-react-snippets'
-
-" .tsx highlighting
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
-
-call plug#end()
+"DELAYS
+set updatetime=300      "avoid delays

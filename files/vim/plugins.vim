@@ -33,3 +33,6 @@ Plug 'peitalin/vim-jsx-typescript', {'for': [ 'javascriptreact', 'typescriptreac
 Plug 'neoclide/coc-json', { 'for': 'json' }
 
 call plug#end()
+
+call g:SourceMany('vim/plugins-configs/', 'NERDTree.vim')
+
