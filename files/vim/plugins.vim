@@ -1,35 +1,35 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'neoclide/coc-json'
-Plug 'fannheyward/coc-pyright'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'dracula/vim'
 Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree'
 Plug 'jiangmiao/auto-pairs'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-
-" HTML support
-Plug 'mattn/emmet-vim'
-
-" Typescipt support
-Plug 'HerringtonDarkholme/yats.vim' 
-
-" React support
-Plug 'MaxMEllon/vim-jsx-pretty'
-
-" Typescipt plugins
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-Plug 'prettier/vim-prettier'
-
-" React HTML snippets
 Plug 'SirVer/ultisnips'
-Plug 'mlaursen/vim-react-snippets'
 
-" .tsx highlighting
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
+" Go
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
+
+" Python
+Plug 'fannheyward/coc-pyright', { 'for': 'python' }
+
+" HTML 
+Plug 'mattn/emmet-vim', { 'for': [ 'html', 'css' ] }
+
+" Typescipt 
+Plug 'HerringtonDarkholme/yats.vim', { 'for': [ 'typescript', 'typescriptreact', ]}
+Plug 'styled-components/vim-styled-components', { 'branch': 'main', 'for': [ 'typescript', 'typescriptreact' ]}
+Plug 'prettier/vim-prettier', { 'for': [ 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'less', 'css', 'scss', 'json', 'graphql', 'markdown' ]}
+Plug 'leafgarland/typescript-vim', {'for': [ 'typescript', 'typescriptreact' ]}
+
+" React 
+Plug 'MaxMEllon/vim-jsx-pretty', { 'for': [ 'javascriptreact', 'typescriptreact' ]}
+Plug 'mlaursen/vim-react-snippets', { 'for': [ 'javascriptreact', 'typescriptreact' ]}
+Plug 'peitalin/vim-jsx-typescript', {'for': [ 'javascriptreact', 'typescriptreact' ]}
+
+" JSON
+Plug 'neoclide/coc-json', { 'for': 'json' }
 
 call plug#end()

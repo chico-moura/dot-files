@@ -13,4 +13,4 @@ endfunction
 
 call SourceMany(
             \'plugins',
-            \'defaults')
+	    \)
