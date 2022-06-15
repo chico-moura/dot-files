@@ -4,5 +4,14 @@ function SourceFromVimDir(filename)
     execute 'source' s:DOT_FILES_DIR . '/vim/' . a:filename . '.vim'
 endfunction
 
-call SourceFromVimDir('init.backup')
 
+function SourceMany(...)
+    for filename in a:000
+        call SourceFromVimDir(filename)
+    endfor
+endfunction
+
+call SourceMany(
+            \'init.backup', 
+            \'plugins',
+            \'defaults')
