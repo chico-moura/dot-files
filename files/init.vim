@@ -1,4 +1,4 @@
-let s:DOT_FILES_DIR = resolve(expand('%:p:h'))
+let s:DOT_FILES_DIR = fnamemodify(resolve(expand('<sfile>:p')), ':h')
 
 function SourceFromVimDir(filename)
     execute 'source' s:DOT_FILES_DIR . '/vim/' . a:filename . '.vim'
@@ -12,6 +12,5 @@ function SourceMany(...)
 endfunction
 
 call SourceMany(
-            \'init.backup', 
             \'plugins',
             \'defaults')
