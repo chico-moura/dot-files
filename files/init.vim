@@ -26,10 +26,9 @@ endfunction
 
 function g:RunPostInitConfigs()
     for config in g:postInitConfigs
-        call config()
+        execute config
     endfor
 endfunction
-
 
 call g:Source('vim/', [
     \'defaults',
