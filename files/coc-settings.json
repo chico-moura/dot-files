@@ -1,4 +1,5 @@
 {
+  "eslint.enable": true,
   "suggest.noselect": false,
   "suggest.enablePreview": true,
   "suggest.removeDuplicateItems": true,

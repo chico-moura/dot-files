@@ -1,4 +1,7 @@
-call g:AddPlug('neoclide/coc.nvim', {'branch': 'release'})
+call g:AddPlug('neoclide/coc.nvim', {
+    \'branch': 'release',
+    \'do': 'yarn install --frozen-lockfile'
+\})
 
 " extensions 
 let g:coc_global_extensions = [
@@ -10,6 +13,10 @@ let g:coc_global_extensions = [
   \ 'coc-css',
   \ 'coc-prettier',
   \ 'coc-vimlsp',
+  \ 'coc-tslint-plugin',
+  \ 'coc-json',
+  \ 'coc-prettier',
+  \ 'coc-eslint'
 \]
 
 " TextEdit might fail if hidden is not set.

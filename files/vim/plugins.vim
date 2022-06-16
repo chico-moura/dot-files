@@ -20,6 +20,10 @@ let html = [
     \'emmet-vim',
 \]
 
+let javascript = [
+    \'vim-js',
+\]
+
 let typescript = [
     \'yats',
     \'vim-styled-components',
@@ -43,6 +47,7 @@ call g:Source('vim/plugins/',
     \go +
     \python +
     \html +
+    \javascript +
     \typescript +
     \react
 \)
