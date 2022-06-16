@@ -1,1 +1,4 @@
-call g:AddPlug('faith/vim-go') 
+call g:AddPlug('fatih/vim-go', { 
+    \'do': ':GoUpdateBinaries', 
+    \'for': 'go' 
+\})

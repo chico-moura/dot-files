@@ -16,5 +16,5 @@ autocmd BufEnter *
         \winnr('$') == 1 && 
         \exists('b:NERDTree') && 
         \b:Nerdtree.isTabTree()
-            \| quit
+            \| quit |
     \endif
