@@ -4,7 +4,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'dracula/vim'
-Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree'
 Plug 'jiangmiao/auto-pairs'
 Plug 'SirVer/ultisnips'
@@ -34,5 +33,8 @@ Plug 'neoclide/coc-json', { 'for': 'json' }
 
 call plug#end()
 
-call g:SourceMany('vim/plugins-configs/', 'NERDTree.vim')
+call g:Source('vim/plugins/', [
+    \'NERDTree', 
+    \'gruvbox',
+\])
 
