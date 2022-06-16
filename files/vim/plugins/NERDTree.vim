@@ -1,6 +1,4 @@
-"call plug#begin(g:PLUGIN_DIR)
-"Plug 'preservim/nerdtree'
-"call plug#end()
+call g:AddPlug('preservim/nerdtree')
 
 " open/close
 nnoremap <F3> :NERDTreeToggle<CR> 

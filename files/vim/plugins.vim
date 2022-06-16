@@ -1,32 +1,46 @@
 let generics = [
     \'NERDTree',
     \'coc',
+    \'vim-airline',
+    \'auto-pairs',
+    \'ultisnips'
 \]
 
 let colorschemes = ['gruvbox']
 
-let allPlugins = generics + colorschemes
+let go = [
+    \'vim-go'
+\]
 
-call g:Source('vim/plugins/', allPlugins)
+let python = [
+    \'coc-pyright'
+\]
+
+
+call g:Source('vim/plugins/', 
+    \generics + 
+    \colorschemes
+\)
 
 call plug#begin('~/.local/share/nvim/plugged')
+
 
 for plugin in g:plugins
     Plug plugin.name, plugin.options
 endfor
 
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'dracula/vim'
-Plug 'preservim/nerdtree'
-Plug 'jiangmiao/auto-pairs'
-Plug 'SirVer/ultisnips'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
+"Plug 'dracula/vim'
+"Plug 'preservim/nerdtree'
+"Plug 'jiangmiao/auto-pairs'
+"Plug 'SirVer/ultisnips'
 "Plug 'morhetz/gruvbox'
-Plug 'preservim/nerdtree'
+"Plug 'preservim/nerdtree'
 
 " Go
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
+"Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
 
 " Python
 Plug 'fannheyward/coc-pyright', { 'for': 'python' }
