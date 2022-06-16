@@ -1,5 +1,6 @@
 let g:DOT_FILES_DIR = fnamemodify(resolve(expand('<sfile>:p')), ':h')
-let g:PLUGIN_DIR = '~/.local/share/nvim/plugged'
+let g:plugins = []
+let g:postInitConfigs = []
 
 
 function g:SourceFromDotFilesDir(directory, filename)
@@ -13,7 +14,25 @@ function g:Source(directory, fileNames)
     endfor
 endfunction
 
-call Source('vim/', [
-    \'plugins',
+function g:AddPlug(plugin, ...)
+    let options = get(a:, 1, {})
+    let plugin = {'name': a:plugin, 'options': options}
+    call add(g:plugins, plugin)
+endfunction
+
+function AddPostInitConfig(config) 
+    call add(g:postInitConfigs, a:config)
+endfunction
+
+function g:RunPostInitConfigs()
+    for config in g:postInitConfigs
+        call config()
+    endfor
+endfunction
+
+
+call g:Source('vim/', [
     \'defaults',
+    \'plugins',
 \])
+
