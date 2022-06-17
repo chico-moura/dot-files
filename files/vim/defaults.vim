@@ -12,5 +12,11 @@ set expandtab		"tabs are spaces
 set autoindent		"autoindent
 set copyindent		"copy indent from previous line
 
+"FILE TYPE SPECIFIC INDENTING
+au FileType javascript,javascriptreact,typescript,typescriptreact setlocal 
+    \ tabstop=2
+    \ softtabstop=2
+    \ shiftwidth=2
+
 "DELAYS
 set updatetime=300      "avoid delays
