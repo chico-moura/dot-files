@@ -105,14 +105,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # alias python="python3"
-#
-alias godot="~/Godot_v3.4.4-stable_x11.64"
 
-function mkdpy() {
-    mkdir "$1"
-    touch "$1"/__init__.py
-}
-alias mkdpy=mkdpy()
 
 # Created by `pipx` on 2021-07-30 15:29:37
 export PATH="$PATH:/home/chico/.local/bin"
@@ -129,3 +122,4 @@ export NVM_DIR="$HOME/.nvm"
 # Bun
 export BUN_INSTALL="/home/chico/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+source /home/chico/code/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
