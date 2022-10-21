@@ -2,7 +2,6 @@ let generics = [
     \'coc',
     \'vim-airline',
     \'NERDTree',
-    \'auto-pairs',
     \'vim-prettier',
 \]
 
