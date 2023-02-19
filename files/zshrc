@@ -104,9 +104,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# alias python="python3"
-alias huawei='putty -ssh debian@159.138.212.63 2185 -fn "Ubuntu Mono 13"'
-
 # Created by `pipx` on 2021-07-30 15:29:37
 export PATH="$PATH:/home/chico/.local/bin"
 
