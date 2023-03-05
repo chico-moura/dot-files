@@ -3,6 +3,7 @@ let generics = [
     \'vim-airline',
     \'NERDTree',
     \'vim-prettier',
+    \'fzf',
 \]
 
 let colorschemes = ['gruvbox']
