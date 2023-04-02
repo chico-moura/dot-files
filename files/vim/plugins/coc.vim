@@ -20,7 +20,6 @@ let g:coc_global_extensions = [
   \ 'coc-pairs'
 \]
 
-noremenu
 " TextEdit might fail if hidden is not set.
 set hidden
 
