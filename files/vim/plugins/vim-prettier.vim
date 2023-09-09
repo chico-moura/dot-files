@@ -12,3 +12,4 @@ call g:AddPlug('prettier/vim-prettier', {
         \'markdown'
     \]
 \})
+

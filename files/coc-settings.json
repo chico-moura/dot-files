@@ -36,5 +36,6 @@
   "javascript.referencesCodeLens.enable": false,
   "javascript.implementationsCodeLens.enable": false,
   "typescript.referencesCodeLens.enable": false,
-  "typescript.implementationsCodeLens.enable": false
+  "typescript.implementationsCodeLens.enable": false,
+  "snippets.ultisnips.pythonPrompt": false
 }

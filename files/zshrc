@@ -107,6 +107,8 @@ source $ZSH/oh-my-zsh.sh
 
 
 alias salt-vm='source ~/code/salt-systems/salt-vm/salt-vm.sh'
+alias bright='source ~/code/bright/bright.sh'
+alias vscode='/snap/bin/code'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
