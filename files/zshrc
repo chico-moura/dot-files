@@ -122,3 +122,8 @@ export NVM_DIR="$HOME/.nvm"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# conda
+export PATH="$HOME/miniconda3/bin:$PATH"
+
+. "$HOME/.asdf/completions/asdf.bash"
